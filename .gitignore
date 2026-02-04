@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE settings
+.vscode/
+.idea/
+.DS_Store
+
+# Datasets and large data
+dataset/
+defective_cracks_long/
+defective_dents_large/
+defective_scratches_thin/
+defective_stains_small/
+
+# Model files
+*.pkl
+*.pth
+*.h5
+
+# Results and artifacts
+results_pics/
+result_*.png
+prediction_result.png
+
+# Specific testing images at root
+Broken-data1.png
+defect_pic1.jpeg
+image.png

@@ -42,6 +42,14 @@ To check a new image:
 python main.py predict --image_path "path/to/test_image.jpg"
 ```
 
+**With Jewelry Segmentation (Recommended):**
+
+To analyze only the jewelry and ignore the background:
+
+```bash
+python main.py predict --image_path "path/to/test_image.jpg" --segment_jewelry
+```
+
 **Output:**
 ```json
 {'anomaly_score': 1.2345, 'prediction': 'OK'}
@@ -51,6 +59,28 @@ python main.py predict --image_path "path/to/test_image.jpg"
 To see the anomaly heatmap:
 ```bash
 python main.py predict --image_path "path/to/test_image.jpg" --vis
+```
+
+With segmentation visualization:
+```bash
+python main.py predict --image_path "path/to/test_image.jpg" --segment_jewelry --vis
+```
+
+## Features
+
+### Jewelry Segmentation
+
+The `--segment_jewelry` flag enables automatic background removal to focus analysis only on the jewelry:
+
+- **Automatic Detection**: Uses adaptive thresholding and contour detection to identify jewelry
+- **Background Removal**: Zeros out background regions in the anomaly map
+- **Improved Accuracy**: Prevents false positives from background noise or texture
+- **Visualization**: Shows the segmented region when using `--vis`
+
+This feature is especially useful when:
+- Images have textured or noisy backgrounds
+- Multiple objects are present in the scene
+- You want to ensure defects are detected only on the jewelry itself
 ```
 
 ### 4. Configuration

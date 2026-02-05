@@ -14,11 +14,7 @@ env/
 .DS_Store
 
 # Datasets and large data
-dataset/
-defective_cracks_long/
-defective_dents_large/
-defective_scratches_thin/
-defective_stains_small/
+
 
 # Model files
 *.pkl
